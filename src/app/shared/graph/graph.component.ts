@@ -259,7 +259,7 @@ export class GraphComponent implements OnInit {
     .data(graph.links)
     .enter().append("line")
       .attr("stroke-width", function(d) { return 2; })
-      .attr("stroke","green");
+      .attr("stroke","#D57F7F");
 
     this.node = this.svg.append("g")
     .attr("class", "nodes")
@@ -268,7 +268,7 @@ export class GraphComponent implements OnInit {
     .enter().append("circle")
       .attr("r", baseThis.nodeRadius)
       .attr("fill", (d)=> { return this.color(d.group); })
-      .attr("stroke","blue")
+      .attr("stroke","black")
       .attr("stroke-width",baseThis.nodeStrokeWidth)
       .call(d3.drag()
           .on("start", (d)=>{return this.dragstarted(d)})
